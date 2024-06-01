@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!--Made by Gabriel-->
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Ottawa Temperature in JSON" />
-  <meta name="keywords" content="mths, ics2o" />
+  <meta name="description" content="NASA Picture of the Day" />
+  <meta name="keywords" content="nasa, apod" />
   <meta name="author" content="Gabriel" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -14,7 +13,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title>Ottawa Temperature in JSON</title>
+  <title>NASA Picture of the Day API</title>
 </head>
 <body>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -22,30 +21,24 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Ottawa Temperature in JSON</span>
+        <span class="mdl-layout-title">NASA Picture of the Day API</span>
       </div>
     </header>
     <main class="mdl-layout__content">
-      <div class="right-image">
-        <img src="./images/TemperatureChart.png" height="200" width="300"
-          alt="Temperature chart" />
-      </div>
       <div class="page-content">
-        Click the button so the temperature of Ottawa is shown
+        Click the button to show the NASA picture of the day
       </div>
       <br />
-      <!-- Simple Textfield -->
       <form action="#">
-      <!-- Accent-colored raised button with ripple -->
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-        onclick="myButtonClicked()">
-        Temperature
-      </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="myButtonClicked(event)">
+          Show Picture
+        </button>
       </form>
       <br />
       <br />
       <div class="page-content-answer">
-        <div id="final-answer"></div>
+        <img id="nasa-image" class="nasa-image" src="" alt="NASA Picture of the Day" style="display:none; width: 100%; max-width: 600px;">
       </div>
     </main>
   </div>

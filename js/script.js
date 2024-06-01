@@ -6,15 +6,15 @@
 
 "use strict"
 
-async function myButtonClicked() {
+async function myButtonClicked(event) {
+  event.preventDefault() // Prevent the form from submitting
   try {
     const resultJSON = await fetch("https://api.nasa.gov/planetary/apod?api_key=A5F9DYnidDu2IzQoEJbdLi07DiNHlMYKYLPV5VIu")
     const jsonData = await resultJSON.json()
-    //console.log(jsonData)
     const picOfTheDay = jsonData.url
     console.log(picOfTheDay)
-    // then show
-    document.getElementById("final-answer").innerHTML = picOfTheDay
+    document.getElementById("nasa-image").src = picOfTheDay
+    document.getElementById("nasa-image").style.display = 'block'
   } catch (error) {
     console.error(error)
   }

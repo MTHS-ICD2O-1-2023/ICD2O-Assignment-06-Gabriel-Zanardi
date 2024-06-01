@@ -29,11 +29,10 @@
   font-size: 1.25rem;
 }
 
-.right-image {
+.nasa-image {
   height: auto;
-  width: 300px;
+  width: 150px;
   float: right;
-  margin-top: 5cm;
 }
 
 body {
